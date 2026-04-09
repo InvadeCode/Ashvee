@@ -339,7 +339,7 @@ const HomeView = ({ navigate, scrollY }) => {
                 { num: 100, suffix: '+', label: 'Industrial Clients' },
                 { text: 'ISO/CPRI', suffix: '', label: 'Certified Assemblies' }
               ].map((stat, idx) => (
-                <div key={idx} className="py-4 md:py-6 pr-4 md:pr-8 flex items-center gap-4 group">
+                <div key={idx} className={`py-5 md:py-8 flex items-center gap-4 md:gap-6 group ${idx === 0 ? 'pr-6 md:pr-12' : 'md:pl-12 md:pr-8'}`}>
                   <span className="text-3xl md:text-4xl font-black text-[#A41313] tracking-tighter group-hover:scale-110 transition-transform origin-left whitespace-nowrap">
                     {stat.text ? stat.text : <AnimatedCounter end={stat.num} suffix={stat.suffix} />}
                   </span>
